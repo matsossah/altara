@@ -8,9 +8,9 @@ import Footer from "../components/Footer";
 import { useTranslation } from "react-i18next";
 import cover from "../img/page1-fr.png";
 
-const PUBLIC_KEY =
-  "pk_test_51L5qTIBIUbtMQI9yqbt3zZZqmMIikX6rZujVLd4VmMf642Q6iIFtzulIk8TZE6jv6nwOXBWemR9ITcLXKXNE654r00OAzBvuMd";
-const stripePromise = loadStripe(PUBLIC_KEY);
+const stripePromise = loadStripe(
+  "pk_test_51L5qTIBIUbtMQI9yqbt3zZZqmMIikX6rZujVLd4VmMf642Q6iIFtzulIk8TZE6jv6nwOXBWemR9ITcLXKXNE654r00OAzBvuMd"
+);
 
 const Checkout = () => {
   const { t } = useTranslation();

@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require("path");
 
 const express = require("express");
 
@@ -12,15 +12,15 @@ const Mailjet = require("node-mailjet");
 
 const app = express();
 
-app.use(cors())
+app.use(cors());
 
 app.use(express.json());
-app.use(express.static(path.resolve(__dirname, 'client/build')));
+app.use(express.static(path.resolve(__dirname, "client/build")));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 3000;
 
 const mailjetClient = Mailjet.apiConnect(
   process.env.MJ_APIKEY_PUBLIC,
@@ -74,7 +74,7 @@ app.post("/stripe/charge", async (req, res) => {
     });
   }
 });
-  
+
 app.post("/emailBook/send", async (req, res) => {
   let { firstName, email, bookLanguage } = req.body;
   let mailjetTemplate;
@@ -185,11 +185,10 @@ app.post("/emailCoaching/send", async (req, res) => {
   }
 });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'client/build', 'index.html'));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "client/build", "index.html"));
 });
 
-
 app.listen(PORT, () => {
-    console.log(`Server started on port: "${PORT}"`)
-}) 
+  console.log(`Server started on port: "${PORT}"`);
+});
