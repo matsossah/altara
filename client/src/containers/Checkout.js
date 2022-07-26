@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 import cover from "../img/page1-fr.png";
 
 const stripePromise = loadStripe(
-  "pk_test_51L5qTIBIUbtMQI9yqbt3zZZqmMIikX6rZujVLd4VmMf642Q6iIFtzulIk8TZE6jv6nwOXBWemR9ITcLXKXNE654r00OAzBvuMd"
+  "pk_live_51L5qTIBIUbtMQI9yk3r46knCexj1nIzaw4vbWH3JC9tkDXzuWu99RvIuBYcbSifytvOjU4CMyXF2jaablZYfWv5T00DC4QXUaG"
 );
 
 const Checkout = () => {
