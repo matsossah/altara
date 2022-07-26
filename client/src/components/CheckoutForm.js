@@ -128,44 +128,12 @@ const CheckoutForm = (props) => {
               }
             }
           }
-        } catch (error) {
-          switch (error.type) {
-            case "StripeCardError":
-              // A declined card error
-              setErrorMessage(t("checkout.cardInvalid"));
-              console.log(error.message); // => e.g. "Your card's expiration year is invalid."
-              break;
-            case "StripeRateLimitError":
-              // Too many requests made to the API too quickly
-              setErrorMessage(t("checkout.cardInvalid"));
-              console.log(error.message); // => e.g. "Your card's expiration year is invalid."
-              break;
-            case "StripeInvalidRequestError":
-              // Invalid parameters were supplied to Stripe's API
-              setErrorMessage(t("checkout.cardInvalid"));
-              console.log(error.message); // => e.g. "Your card's expiration year is invalid."
-              break;
-            case "StripeAPIError":
-              // An error occurred internally with Stripe's API
-              setErrorMessage(t("checkout.cardInvalid"));
-              console.log(error.message); // => e.g. "Your card's expiration year is invalid."
-              break;
-            case "StripeConnectionError":
-              // Some kind of error occurred during the HTTPS communication
-              setErrorMessage(t("checkout.cardInvalid"));
-              console.log(error.message); // => e.g. "Your card's expiration year is invalid."
-              break;
-            case "StripeAuthenticationError":
-              // You probably used an incorrect API key
-              setErrorMessage(t("checkout.cardInvalid"));
-              console.log(error.message); // => e.g. "Your card's expiration year is invalid."
-              break;
-            default:
-              // Handle any other types of unexpected errors
-              break;
-          }
-          console.log("Error !", error);
+        } catch (err) {
+          console.log(err);
+          setErrorMessage(t("checkout.cardInvalid"));
         }
+      } else {
+        console.log(error);
       }
       setPaymentLoading(false);
     }

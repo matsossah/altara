@@ -235,7 +235,7 @@ i18n
             country: "Country",
             orderComing: "✉️ Your order is on the way ✨",
             error: "Please fill out all the fields",
-            cardInvalid: "Please input valid car info",
+            cardInvalid: "Please input valid card info",
           },
           footer: {
             cta: "Let's go ! 👉",
