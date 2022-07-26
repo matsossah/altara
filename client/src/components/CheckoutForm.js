@@ -127,6 +127,8 @@ const CheckoutForm = (props) => {
                 console.log("Error !", error);
               }
             }
+          } else {
+            setErrorMessage(t("checkout.cardInvalid"));
           }
         } catch (err) {
           console.log(err);
