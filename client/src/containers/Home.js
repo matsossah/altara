@@ -1,6 +1,9 @@
 import React from "react";
-import coverImage from "../img/coverImage.png";
-import paperBack from "../img/paperBack.jpg";
+import i18n from "i18next";
+import coverPicFR from "../img/coverImage.png";
+import coverPicEN from "../img/lvqm_products_en.png";
+import paperBackFR from "../img/paperBack.jpg";
+import paperBackEN from "../img/book_en.jpeg";
 import barbara from "../img/barbara.png";
 import barbaraProfile from "../img/barbaraProfile.png";
 import marie from "../img/marie.png";
@@ -26,6 +29,22 @@ import "react-multi-carousel/lib/styles.css";
 
 const Home = () => {
   const { t } = useTranslation();
+  var language = i18n.language.substring(0, 2);
+  console.log(language);
+
+  var coverPic;
+  if (language === "fr") {
+    coverPic = coverPicFR;
+  } else if (language === "en") {
+    coverPic = coverPicEN;
+  }
+
+  var paperBack;
+  if (language === "fr") {
+    paperBack = paperBackFR;
+  } else if (language === "en") {
+    paperBack = paperBackEN;
+  }
 
   const cards1 = {
     peace: {
@@ -165,7 +184,7 @@ const Home = () => {
             />
           </div>
           <div className="column">
-            <img src={coverImage} alt="Home cover"></img>
+            <img src={coverPic} alt="Home cover"></img>
           </div>
         </div>
         <div className="level has-centered-text is-mobile py-6">
