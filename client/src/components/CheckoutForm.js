@@ -133,7 +133,7 @@ const CheckoutForm = (props) => {
             case "StripeCardError":
               // A declined card error
               setErrorMessage(t("checkout.cardInvalid"));
-              err.message; // => e.g. "Your card's expiration year is invalid."
+              console.log(error.message); // => e.g. "Your card's expiration year is invalid."
               break;
             case "StripeRateLimitError":
               // Too many requests made to the API too quickly
