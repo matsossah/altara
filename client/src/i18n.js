@@ -235,6 +235,7 @@ i18n
             country: "Country",
             orderComing: "✉️ Your order is on the way ✨",
             error: "Please fill out all the fields",
+            cardInvalid: "Please input valid car info",
           },
           footer: {
             cta: "Let's go ! 👉",
@@ -458,6 +459,7 @@ i18n
             country: "Pays",
             orderComing: "✉️ Ta commande est partie ✨",
             error: "Merci de remplir tous les champs",
+            cardInvalid: "Merci d'entrer des informations de cartes valides",
           },
           footer: {
             cta: "C'est parti ! 👉",

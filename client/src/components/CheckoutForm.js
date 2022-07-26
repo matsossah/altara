@@ -100,15 +100,12 @@ const CheckoutForm = (props) => {
           if (response.data.success) {
             if (type === "book") {
               try {
-                const response2 = await axios.post(
-                  "/emailBook/send",
-                  {
-                    type: type,
-                    firstName: firstName,
-                    email: email,
-                    bookLanguage: bookLanguage,
-                  }
-                );
+                const response2 = await axios.post("/emailBook/send", {
+                  type: type,
+                  firstName: firstName,
+                  email: email,
+                  bookLanguage: bookLanguage,
+                });
                 if (response2.data.success) {
                   props.onCompletedChange(true);
                 }
@@ -117,15 +114,12 @@ const CheckoutForm = (props) => {
               }
             } else {
               try {
-                const response3 = await axios.post(
-                  "/emailCoaching/send",
-                  {
-                    type: type,
-                    firstName: firstName,
-                    email: email,
-                    language: language,
-                  }
-                );
+                const response3 = await axios.post("/emailCoaching/send", {
+                  type: type,
+                  firstName: firstName,
+                  email: email,
+                  language: language,
+                });
                 if (response3.data.success) {
                   props.onCompletedChange(true);
                 }
@@ -135,6 +129,31 @@ const CheckoutForm = (props) => {
             }
           }
         } catch (error) {
+          switch (error.type) {
+            case "StripeCardError":
+              // A declined card error
+              setErrorMessage(t("checkout.cardInvalid"));
+              err.message; // => e.g. "Your card's expiration year is invalid."
+              break;
+            case "StripeRateLimitError":
+              // Too many requests made to the API too quickly
+              break;
+            case "StripeInvalidRequestError":
+              // Invalid parameters were supplied to Stripe's API
+              break;
+            case "StripeAPIError":
+              // An error occurred internally with Stripe's API
+              break;
+            case "StripeConnectionError":
+              // Some kind of error occurred during the HTTPS communication
+              break;
+            case "StripeAuthenticationError":
+              // You probably used an incorrect API key
+              break;
+            default:
+              // Handle any other types of unexpected errors
+              break;
+          }
           console.log("Error !", error);
         }
       }
