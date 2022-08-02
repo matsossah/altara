@@ -27,8 +27,8 @@ import page8EN from "../img/page8-en.png";
 import page9EN from "../img/page9-en.png";
 import page10EN from "../img/page10-en.png";
 import safetyIcons from "../img/paymentSafety.png";
-import ebookImageFR from "../img/ebookImage-FR.jpeg";
-import ebookImageEN from "../img/ebookImage-EN.png";
+import ebookImageFR from "../img/ebookImage-fr.png";
+import ebookImageEN from "../img/ebookImage-en.png";
 import paperImageFR from "../img/paperImage-fr.png";
 import paperImageEN from "../img/paperImage-en.png";
 
