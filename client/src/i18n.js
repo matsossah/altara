@@ -140,6 +140,14 @@ i18n
             lionelSubtitle: "@Lionel",
             lionelDescription:
               "LVQM allowed me to flourish in a career that really fits me. I had the chance to explore many areas in sport and law, including working with the Congolese national football team, being a Scout for the Manchester City academy or teaching Winsport School. Finding this balance between pedagogy with the next generation, sport and law makes me more happy everyday and I thank LVQM for the great advice that lead me closer to this path which has only just begun !",
+            miraTitle: "Mira",
+            miraSubtitle: "@mirasaadallah",
+            miraDescription:
+              "My ambition was to give up some bad habits to adopt those of a healthy morning routine, physical activity, and to take care of myself. At first it was not easy but I kept up the pace thanks to my LVQM follow-ups!",
+            jeanneTitle: "jeanne",
+            jeanneSubtitle: "@jeanne_lhx",
+            jeanneDescription:
+              "I had the chance to know Mateo and Simon several years ago during my professional career and to follow the evolution of LVQM. For my part, LVQM allowed me to ask myself the right questions about what I wanted and what I no longer wanted in my professional and personal life, to evacuate my frustrations and to be in agreement with my evolution and my choices. I advise anyone who wants to see more clearly and approach life in a more serene way to read the e-books and join the LVQM community 🙌🏻",
           },
           productDetails: {
             title: "LVQM, the adventure towards the life you deserve",
@@ -365,9 +373,17 @@ i18n
             barbaraDescription:
               "J’ai eu la chance de rencontrer Mateo et de suivre le programme LVQM. Vous savez il y a ce genre de personne avec qui vous passez une heure et qui vous redonne un coup de boost comme jamais ! Grâce à LVQM, j’ai retrouvé une force et une positivité incroyable pour mener à bien mes nouveaux projets et vivre la vie différemment, remplie d'amour 🥰 Je me sens tellement plus épanouie et la vie me le rend bien. LVQM fait partie de ma nouvelle manière de vivre et je vous souhaite à tous ce bonheur 🤍",
             lionelTitle: "Lionel",
-            lionelSubtitle: "@Lionel",
+            lionelSubtitle: "@lionel.ingende",
             lionelDescription:
               "LVQM m’a permis de m’épanouir dans une carrière qui me ressemble vraiment. J’ai eu la chance d’explorer de nombreux domaines dans le sport et le droit, notamment en travaillant avec l’équipe nationale de football congolaise, en étant scoot pour l’académie de Manchester City ou en enseignant dans l’école de management du sport Winsport School. Trouver cet équilibre entre la pédagogie auprès des jeunes, le sport et le droit me rend de plus en plus heureux et je remercie LVQM pour les nombreux conseils m’ayant rapprochés de cette voie qui ne fait que commencer !",
+            miraTitle: "Mira",
+            miraSubtitle: "@mirasaadallah",
+            miraDescription:
+              "J’avais pour ambition d’abandonner quelques mauvaises habitudes pour adopter celles d’une routine matinale saine, sportive, et prendre soin de moi. Au départ ça n’a pas été évident mais j’ai tenu le rythme avec mon suivi LVQM !",
+            jeanneTitle: "jeanne",
+            jeanneSubtitle: "@jeanne_lhx",
+            jeanneDescription:
+              "J’ai eu la chance de connaître Mateo et Simon il y a maintenant plusieurs années lors de mon parcours professionnel et de suivre l’évolution d'LVQM. Pour ma part, LVQM m’a permis de me poser les bonnes questions sur ce que je voulais et ce que je ne voulais plus dans ma vie pro et perso, évacuer mes frustrations et être en accord avec mon évolution et mes choix. Je conseille à tous ceux qui souhaitent y voir plus clair et aborder la vie de manière plus sereine de lire le e-books et de rejoindre la communauté LVQM 🙌🏻",
           },
           productDetails: {
             title: "LVQM, l'aventure vers la vie que tu mérites",

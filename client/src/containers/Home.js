@@ -12,6 +12,10 @@ import dennis from "../img/dennis.png";
 import dennisProfile from "../img/dennisProfile.png";
 import lionel from "../img/lionel.png";
 import lionelProfile from "../img/lionelProfile.png";
+import jeanne from "../img/jeanne.png";
+import jeanneProfile from "../img/jeanneProfile.png";
+import mira from "../img/mira.png";
+import miraProfile from "../img/miraProfile.png";
 import NavigationMenu from "../components/NavigationMenu";
 import Footer from "../components/Footer";
 import CTA from "../components/CTA";
@@ -128,21 +132,6 @@ const Home = () => {
   };
 
   const testimonials = {
-    marie: {
-      profilePic: marieProfile,
-      backgroundImage: marie,
-      title: t("testimonials.marieTitle"),
-      subtitle: "",
-      description: t("testimonials.marieDescription"),
-    },
-    dennis: {
-      profilePic: dennisProfile,
-      backgroundImage: dennis,
-      title: t("testimonials.dennisTitle"),
-      subtitle: t("testimonials.dennisSubtitle"),
-      link: "https://www.linkedin.com/in/dennis-nazare-088bb0ba/",
-      description: t("testimonials.dennisDescription"),
-    },
     barbara: {
       profilePic: barbaraProfile,
       backgroundImage: barbara,
@@ -158,6 +147,37 @@ const Home = () => {
       subtitle: t("testimonials.lionelSubtitle"),
       link: "https://www.instagram.com/lionel.ingende/",
       description: t("testimonials.lionelDescription"),
+    },
+    jeanne: {
+      profilePic: jeanneProfile,
+      backgroundImage: jeanne,
+      title: t("testimonials.jeanneTitle"),
+      subtitle: t("testimonials.jeanneSubtitle"),
+      link: "https://www.instagram.com/jeanne_lhx/",
+      description: t("testimonials.jeanneDescription"),
+    },
+    dennis: {
+      profilePic: dennisProfile,
+      backgroundImage: dennis,
+      title: t("testimonials.dennisTitle"),
+      subtitle: t("testimonials.dennisSubtitle"),
+      link: "https://www.linkedin.com/in/dennis-nazare-088bb0ba/",
+      description: t("testimonials.dennisDescription"),
+    },
+    mira: {
+      profilePic: miraProfile,
+      backgroundImage: mira,
+      title: t("testimonials.miraTitle"),
+      subtitle: t("testimonials.miraSubtitle"),
+      link: "https://www.instagram.com/mirasaadallah/",
+      description: t("testimonials.miraDescription"),
+    },
+    marie: {
+      profilePic: marieProfile,
+      backgroundImage: marie,
+      title: t("testimonials.marieTitle"),
+      subtitle: "",
+      description: t("testimonials.marieDescription"),
     },
   };
 
