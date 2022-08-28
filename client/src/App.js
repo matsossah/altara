@@ -7,6 +7,13 @@ import Books from "./containers/Books";
 import Coaching from "./containers/Coaching";
 import Community from "./containers/Community";
 import Checkout from "./containers/Checkout";
+import TagManager from 'react-gtm-module'
+
+const tagManagerArgs = {
+    gtmId: 'GTM-W7LZ8PG'
+}
+
+TagManager.initialize(tagManagerArgs)
 
 export default function App() {
   return (
