@@ -13,7 +13,7 @@ const stripePromise = loadStripe(
 );
 // const stripePromise = loadStripe(
 //  "pk_test_51L5qTIBIUbtMQI9yqbt3zZZqmMIikX6rZujVLd4VmMf642Q6iIFtzulIk8TZE6jv6nwOXBWemR9ITcLXKXNE654r00OAzBvuMd"
-//);
+// );
 
 const Checkout = () => {
   const { t } = useTranslation();
@@ -164,7 +164,7 @@ const Checkout = () => {
               </div>
             </div>
           ) : (
-            <div className="py-6 my-6">
+            <div className="pb-6 mb-6">
               <div className="level pt-6 mt-6">
                 <div className="level-item has-text-centered level-is-shrinkable">
                   <h2 className="zona animation mt-6 white">
