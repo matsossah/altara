@@ -188,7 +188,7 @@ const Coaching = () => {
               }}
             />
           </div>
-          <div className="column my-6">
+          {/* <div className="column my-6">
             <figure className="image is-16by9">
               <iframe
                 title="motivational video"
@@ -200,7 +200,7 @@ const Coaching = () => {
                 allowFullScreen
               ></iframe>
             </figure>
-          </div>
+          </div> */}
         </div>
         <section className="section is-small bg-purple mb-6 py-6">
           <div className="level px-5">
