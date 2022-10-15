@@ -7,6 +7,7 @@ import Books from "./containers/Books";
 import Coaching from "./containers/Coaching";
 import Community from "./containers/Community";
 import Checkout from "./containers/Checkout";
+import Confirmation from "./containers/Confirmation";
 import TagManager from 'react-gtm-module'
 
 const tagManagerArgs = {
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/coaching" element={<Coaching />}></Route>
           <Route path="/community" element={<Community />}></Route>
           <Route path="/checkout" element={<Checkout />}></Route>
+          <Route path="/confirmation" element={<Confirmation />}></Route>
         </Routes>
       </Router>
     </div>
