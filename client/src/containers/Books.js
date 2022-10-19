@@ -247,6 +247,7 @@ const Books = () => {
                 <div className="level-left">
                   <div className="level-item is-valigned">
                     <CTA
+                      id={"submit"}
                       type={"link"}
                       label={t("books.shopCTA")}
                       destination="/checkout"

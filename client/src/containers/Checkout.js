@@ -3,11 +3,11 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "../components/CheckoutForm";
 import NavigationMenu from "../components/NavigationMenu";
-import { useLocation } from "react-router-dom";
+import { useLocation,useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import { useTranslation } from "react-i18next";
 import cover from "../img/page1-fr.png";
-
 const stripePromise = loadStripe(
   "pk_live_51L5qTIBIUbtMQI9yk3r46knCexj1nIzaw4vbWH3JC9tkDXzuWu99RvIuBYcbSifytvOjU4CMyXF2jaablZYfWv5T00DC4QXUaG"
 );
@@ -16,6 +16,7 @@ const stripePromise = loadStripe(
 // );
 
 const Checkout = () => {
+  const navigate = useNavigate();
   const { t } = useTranslation();
   const location = useLocation();
   const [completed, setCompleted] = useState(false);
@@ -28,6 +29,8 @@ const Checkout = () => {
     coachChoice,
     formulaChoice,
   } = location.state;
+
+  // const navigate = useNavigate();
 
   const formulas = {
     starter: {
@@ -164,35 +167,39 @@ const Checkout = () => {
               </div>
             </div>
           ) : (
-            <div className="pb-6 mb-6">
-              <div className="level pt-6 mt-6">
-                <div className="level-item has-text-centered level-is-shrinkable">
-                  <h2 className="zona animation mt-6 white">
-                    {t("vocab.thanks")}
-                  </h2>
-                </div>
-              </div>
-              <div className="level mb-6">
-                <div className="level-item has-text-centered level-is-shrinkable">
-                  <p className="zona animation white is-size-4">
-                    {t("checkout.orderComing")}
-                  </p>
-                </div>
-              </div>
+            // navigate("/confirmation")
+           
+              navigate('/confirmation')
+           
+                        // <div className="pb-6 mb-6">
+            //   <div className="level pt-6 mt-6">
+            //     <div className="level-item has-text-centered level-is-shrinkable">
+            //       <h2 className="zona animation mt-6 white">
+            //         {t("vocab.thanks")}
+            //       </h2>
+            //     </div>
+            //   </div>
+            //   <div className="level mb-6">
+            //     <div className="level-item has-text-centered level-is-shrinkable">
+            //       <p className="zona animation white is-size-4">
+            //         {t("checkout.orderComing")}
+            //       </p>
+            //     </div>
+            //   </div>
 
-              <div className="level">
-                <div className="level-item has-text-centered level-is-shrinkable mb-6">
-                  <iframe
-                    src="https://giphy.com/embed/10hO3rDNqqg2Xe"
-                    title="party"
-                    width="480"
-                    height="252"
-                    frameBorder="0"
-                    className="giphy-embed"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
+            //   <div className="level">
+            //     <div className="level-item has-text-centered level-is-shrinkable mb-6">
+            //       <iframe
+            //         src="https://giphy.com/embed/10hO3rDNqqg2Xe"
+            //         title="party"
+            //         width="480"
+            //         height="252"
+            //         frameBorder="0"
+            //         className="giphy-embed"
+            //       ></iframe>
+            //     </div>
+            //   </div>
+            // </div>
           )}
         </div>
         <Footer />
