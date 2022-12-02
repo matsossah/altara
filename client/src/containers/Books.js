@@ -3,6 +3,7 @@ import i18n from "i18next";
 import NavigationMenu from "../components/NavigationMenu";
 import Footer from "../components/Footer";
 import CTA from "../components/CTA";
+import ExternalCTA from "../components/ExternalCTA";
 import { useTranslation } from "react-i18next";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -29,8 +30,8 @@ import page10EN from "../img/page10-en.png";
 import safetyIcons from "../img/paymentSafety.png";
 import ebookImageFR from "../img/ebookImage-fr.png";
 import ebookImageEN from "../img/ebookImage-en.png";
-import paperImageFR from "../img/paperImage-fr.png";
-import paperImageEN from "../img/paperImage-en.png";
+import paperImageFR from "../img/paperImage-fr.jpg";
+import paperImageEN from "../img/paperImage-en.jpg";
 
 const Books = () => {
   const { t } = useTranslation();
@@ -73,7 +74,7 @@ const Books = () => {
     },
     paper: {
       title: t("productDetails.paper"),
-      price: t("vocab.soon"),
+      price: (14.90).toFixed(2),
       image: { en: paperImageEN, fr: paperImageFR },
     },
     //    paperEbook: {
@@ -201,14 +202,14 @@ const Books = () => {
                         {format === "paper" ? (
                           <label
                             className="radio has-text-left is-valigned"
-                            disabled
+                            // disabled
                           >
                             <input
                               type="radio"
                               name="answer"
                               onChange={() => bookFormatChoice(format)}
                               checked={format === bookFormat}
-                              disabled
+                              // disabled
                             ></input>
                           </label>
                         ) : (
@@ -246,7 +247,24 @@ const Books = () => {
               <div className="level mt-6 mb-2 is-mobile">
                 <div className="level-left">
                   <div className="level-item is-valigned">
-                    <CTA
+                  {bookFormat === "paper" ? (
+                    <ExternalCTA
+                      id={"submit"}
+                      type={"link"}
+                      label={t("books.shopCTA")}
+                      destination="https://www.amazon.fr/dp/295825870X?ref_=cm_sw_r_cp_ud_dp_GSDTV12GVTT0GBKR6NZ2"
+                      // state={{
+                      //   type: "book",
+                      //   bookLanguage: bookLanguage,
+                      //   bookFormat: bookFormat,
+                      //   cartTotal: bookTotal,
+                      // }}
+                      style={{
+                        style:
+                          "button bg-purple is-medium is-rounded mx-5 my-3 cta",
+                      }}
+                    /> ) : (
+                      <CTA
                       id={"submit"}
                       type={"link"}
                       label={t("books.shopCTA")}
@@ -262,6 +280,7 @@ const Books = () => {
                           "button bg-purple is-medium is-rounded mx-5 my-3 cta",
                       }}
                     />
+                    )}
                   </div>
                 </div>
                 <div className="level-right">
