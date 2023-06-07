@@ -28,14 +28,18 @@ i18n
           },
           nav: {
             home: "Home",
-            books: "Books",
-            coaching: "Coaching",
-            community: "Community",
+            day1: "Day 1",
+            day2: "Day 2",
+            day3: "Day 3",
+            day4: "Day 4",
+            day5: "Day 5",
+            day6: "Day 6",
+            day7: "Day 7",
           },
           cover: {
             tagBold: "Get",
             tagline: "the life you deserve",
-            description:
+            nav:
               "By merging spirituality and the latest scientific findings, LVQM invites you to explore the way your beliefs, emotions, thoughts and actions can be changed in order to reach internal peace and any of your dreams !",
             cta: "Let's go !",
             lvqmLife: "The life",
@@ -266,9 +270,13 @@ i18n
           },
           nav: {
             home: "Accueil",
-            books: "Livres",
-            coaching: "Coaching",
-            community: "Communauté",
+            day1: "Jour 1",
+            day2: "Jour 2",
+            day3: "Jour 3",
+            day4: "Jour 4",
+            day5: "Jour 5",
+            day6: "Jour 6",
+            day7: "Jour 7",
           },
           cover: {
             tagBold: "Atteins",

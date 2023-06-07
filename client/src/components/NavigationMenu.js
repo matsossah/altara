@@ -15,9 +15,13 @@ const NavigationMenu = () => {
   const [burgerActive, setBurgerActive] = useState(false);
   const [tabSelected] = useState({
     home: location.pathname === "/" ? "is-underlined" : "",
-    books: location.pathname === "/books" ? "is-underlined" : "",
-    coaching: location.pathname === "/coaching" ? "is-underlined" : "",
-    //    community: location.pathname === "/community" ? "is-underlined" : "",
+    day1: location.pathname === "/day1" ? "is-underlined" : "",
+    day2: location.pathname === "/day2" ? "is-underlined" : "",
+    day3: location.pathname === "/day3" ? "is-underlined" : "",
+    day4: location.pathname === "/day4" ? "is-underlined" : "",
+    day5: location.pathname === "/day5" ? "is-underlined" : "",
+    day6: location.pathname === "/day6" ? "is-underlined" : "",
+    day7: location.pathname === "/day7" ? "is-underlined" : "",
   });
 
   let currentlanguage = i18n.language;
@@ -74,25 +78,47 @@ const NavigationMenu = () => {
               {t("nav.home")}
             </Link>
             <Link
-              to="/books"
+              to="/day1"
               className={"navbar-item zona " + tabSelected.books}
             >
-              {t("nav.books")}
+              {t("nav.day1")}
             </Link>
             <Link
-              to="/coaching"
+              to="/day2"
               className={"navbar-item zona " + tabSelected.coaching}
             >
-              {t("nav.coaching")}
+              {t("nav.day2")}
             </Link>
-            {
-              //            <Link
-              //              to="/community"
-              //              className={"navbar-item zona " + tabSelected.community}
-              //</div>            >
-              //</div>             {t("nav.community")}
-              //           </Link>
-            }
+            <Link
+              to="/day3"
+              className={"navbar-item zona " + tabSelected.coaching}
+            >
+              {t("nav.day3")}
+            </Link>
+            <Link
+              to="/day4"
+              className={"navbar-item zona " + tabSelected.books}
+            >
+              {t("nav.day4")}
+            </Link>
+            <Link
+              to="/day5"
+              className={"navbar-item zona " + tabSelected.books}
+            >
+              {t("nav.day5")}
+            </Link>
+            <Link
+              to="/day6"
+              className={"navbar-item zona " + tabSelected.books}
+            >
+              {t("nav.day6")}
+            </Link>
+            <Link
+              to="/day7"
+              className={"navbar-item zona " + tabSelected.books}
+            >
+              {t("nav.day7")}
+            </Link>
           </div>
           <div className="navbar-end">
             {Object.keys(lngs).map((lng) => (
