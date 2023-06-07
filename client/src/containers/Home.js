@@ -8,7 +8,7 @@ import Experience from "./Experience.jsx";
 
 const Home = () => {
   return (
-    <div>
+    <div style={{ width: "100vw", height: "100vh" }}>
       <NavigationMenu />
       <Canvas
         gl={{
@@ -22,6 +22,7 @@ const Home = () => {
           far: 200,
           position: [3, 2, 6],
         }}
+        
       >
         <Experience />
       </Canvas>

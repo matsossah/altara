@@ -1,9 +1,9 @@
 import React from "react";
 import { Canvas } from '@react-three/fiber'
 import * as THREE from 'three'
-import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import './index.css';
 import Home from "./containers/Home";
 import Day1 from "./containers/Day1";
 import Day2 from "./containers/Day2";

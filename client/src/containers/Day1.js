@@ -15,7 +15,7 @@ import Footer from "../components/Footer";
 
 const Day1 = () => {
   return (
-    <div>
+    <div className="wrapper" style={{ width: "100vw", height: "100vh" }}>
       <NavigationMenu />
       <Canvas
         gl={{

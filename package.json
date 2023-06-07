@@ -6,7 +6,7 @@
   "main": "app.js",
   "scripts": {
     "postinstall": "cd client && npm install",
-    "start": "npm run build:ui && node app.js",
+    "start": "npm run build:ui && node app.js && set HTTPS=true",
     "build:ui": "rm -rf client/build && cd ./client && npm run build",
     "heroku-postbuild": "rm -rf client/build && cd ./client && npm run build --prod",
     "build": "react-scripts build",

@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 const Footer = (props) => {
   const { t } = useTranslation();
   return (
+    <div>
     <footer className="footer mt-6 is-fixed-bottom">
       <div className="content  mt-3">
         <p className="home px-5 pt-3 has-text-weight-bold is-size-3 has-text-centered">
@@ -27,6 +28,7 @@ const Footer = (props) => {
         </div>
       </div>
     </footer>
+    </div>
   );
 };
 
