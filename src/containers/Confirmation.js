@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import NavigationMenu from "../components/NavigationMenu";
-import { useLocation } from "react-router-dom";
 import Footer from "../components/Footer";
 import { useTranslation } from "react-i18next";
-import i18n from "i18next";
 
 
 const Confirmation = () => {
-        const { t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className=" bg-purple">

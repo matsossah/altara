@@ -1,14 +1,13 @@
 import React from "react";
+import NavigationMenu from "../components/NavigationMenu";
+import SunriseSunset from "../components/SunriseSunset";
+import Footer from "../components/Footer";
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
-import i18n from "i18next";
-import NavigationMenu from "../components/NavigationMenu";
-import Footer from "../components/Footer";
-import Experience from "./Experience.jsx";
 
-const Home = () => {
+const Day3 = () => {
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <div className="wrapper" style={{ width: "100vw", height: "100vh" }}>
       <NavigationMenu />
       <Canvas
         gl={{
@@ -22,13 +21,13 @@ const Home = () => {
           far: 200,
           position: [3, 2, 6],
         }}
-        
       >
-        <Experience />
+        <SunriseSunset />
       </Canvas>
+
       <Footer />
     </div>
   );
 };
 
-export default Home;
+export default Day3;

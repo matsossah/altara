@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import safetyIcons from "../img/paymentSafety.png";
 
 const CheckoutForm = (props) => {
-  const { type, language, cartTotal, format, bookLanguage } = props.state;
+  const { type, language, cartTotal, bookLanguage } = props.state;
   const { t } = useTranslation();
   const stripe = useStripe();
   const elements = useElements();
@@ -17,13 +17,8 @@ const CheckoutForm = (props) => {
   const [lastNameValid, setLastNameValid] = useState("");
   const [email, setEmail] = useState("");
   const [emailValid, setEmailValid] = useState("");
-  const [address, setAddress] = useState("");
-  const [zipCode, setZipCode] = useState("");
-  const [city, setCity] = useState("");
-  const [country, setCountry] = useState("");
   const [paymentLoading, setPaymentLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
-  const serverUrl = "https://www.lvqm.me";
 
   const handleFirstNameChange = (value) => {
     setFirstName(value);
@@ -46,6 +41,7 @@ const CheckoutForm = (props) => {
   const handleEmailChange = (value) => {
     setEmail(value);
     const regex =
+    //eslint-disable-next-line
       /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     if (regex.test(value) === true) {
       setEmailValid("is-primary");
@@ -93,10 +89,6 @@ const CheckoutForm = (props) => {
             firstName: firstName,
             lastName: lastName,
             email: email,
-            address: address,
-            zip: zipCode,
-            city: city,
-            coutry: country,
           });
           if (response.data.success) {
             if (type === "book") {
@@ -193,63 +185,7 @@ const CheckoutForm = (props) => {
             }}
           />
         </div>{" "}
-        {
-          //format === "paper" && (
-          //          <div>
-          //            <PlacesAutocomplete
-          //              onZipChange={(value) => {
-          //                setZipCode(value);
-          //              }}
-          //              onCityChange={(value) => {
-          //                setCity(value);
-          //              }}
-          //              onCountryChange={(value) => {
-          //                setCountry(value);
-          //              }}
-          //              onAddressChange={(value) => {
-          //                setAddress(value);
-          //              }}
-          //            />
-          //            <div className="field is-horizontal">
-          //              <div className="field-body">
-          //                <div className="field">
-          //                  <input
-          //                    className="input"
-          //                    type="text"
-          //                    placeholder={t("checkout.zip")}
-          //                   value={zipCode}
-          //                   onChange={(e) => {
-          //                      setZipCode(e.target.value);
-          //                    }}
-          //                  />{" "}
-          //</div>                </div>
-          //                <div className="field">
-          //                  <input
-          //                    className="input"
-          //                    type="text"
-          //                    placeholder={t("checkout.city")}
-          //                    value={city}
-          //                    onChange={(e) => {
-          //                      setCity(e.target.value);
-          //                    }}
-          //                  />
-          //</div>                </div>
-          //                <div className="field">
-          //                  <input
-          //                    className="input"
-          //                    type="text"
-          //                    placeholder={t("checkout.country")}
-          //                    value={country}
-          //                    onChange={(e) => {
-          //                      setCountry(e.target.value);
-          //                    }}
-          //                  />
-          //                </div>
-          //            </div>
-          //            </div>
-          //          </div>
-          //        )}
-        }
+  
         {errorMessage && (
           <h3 className="error mt-5">{"🙏˚ " + errorMessage}</h3>
         )}

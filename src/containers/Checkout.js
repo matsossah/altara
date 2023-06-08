@@ -7,7 +7,7 @@ import { useLocation,useNavigate } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import { useTranslation } from "react-i18next";
-import cover from "../img/page1-fr.png";
+import cover from "../img/page1-en.png";
 const stripePromise = loadStripe(
   "pk_live_51L5qTIBIUbtMQI9yk3r46knCexj1nIzaw4vbWH3JC9tkDXzuWu99RvIuBYcbSifytvOjU4CMyXF2jaablZYfWv5T00DC4QXUaG"
 );

@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import i18n from "i18next";
+import React from "react";
 import NavigationMenu from "../components/NavigationMenu";
 import Footer from "../components/Footer";
 
-const Day4 = () => {
+const Day6 = () => {
   return (
     <div>
       <NavigationMenu />
@@ -13,4 +12,4 @@ const Day4 = () => {
   );
 }
 
-export default Day4;
+export default Day6;

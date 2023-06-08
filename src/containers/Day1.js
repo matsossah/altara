@@ -1,19 +1,16 @@
 import {
-  shaderMaterial,
   Sparkles,
   Center,
-  useTexture,
-  useGLTF,
   OrbitControls,
 } from "@react-three/drei";
-import React, { useState } from "react";
+import React from "react";
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
-import i18n from "i18next";
 import NavigationMenu from "../components/NavigationMenu";
 import Footer from "../components/Footer";
 
 const Day1 = () => {
+
   return (
     <div className="wrapper" style={{ width: "100vw", height: "100vh" }}>
       <NavigationMenu />
