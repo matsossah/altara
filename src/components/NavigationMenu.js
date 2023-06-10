@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import LogoLVQM from "../img/logo-lvqm.png";
+import Altara from "../img/ALTARA.png";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../i18n";
+import '../index.css';
 
 const lngs = {
   fr: { nativeName: "Français", flag: "🇫🇷", color: "" },
@@ -49,8 +50,8 @@ const NavigationMenu = () => {
         <div className="navbar-brand">
           <Link to="/">
             <img
-              src={LogoLVQM}
-              alt="logo LVQM"
+              src={Altara}
+              alt="logo Altara"
               style={{ height: 45, width: 160 }}
               className="mx-2 my-2"
             ></img>
@@ -79,43 +80,43 @@ const NavigationMenu = () => {
             </Link>
             <Link
               to="/day1"
-              className={"navbar-item zona " + tabSelected.books}
+              className={"navbar-item zona " + tabSelected.day1}
             >
               {t("nav.day1")}
             </Link>
             <Link
               to="/day2"
-              className={"navbar-item zona " + tabSelected.coaching}
+              className={"navbar-item zona " + tabSelected.day2}
             >
               {t("nav.day2")}
             </Link>
             <Link
               to="/day3"
-              className={"navbar-item zona " + tabSelected.coaching}
+              className={"navbar-item zona " + tabSelected.day3}
             >
               {t("nav.day3")}
             </Link>
             <Link
               to="/day4"
-              className={"navbar-item zona " + tabSelected.books}
+              className={"navbar-item zona " + tabSelected.day4}
             >
               {t("nav.day4")}
             </Link>
             <Link
               to="/day5"
-              className={"navbar-item zona " + tabSelected.books}
+              className={"navbar-item zona " + tabSelected.day5}
             >
               {t("nav.day5")}
             </Link>
             <Link
               to="/day6"
-              className={"navbar-item zona " + tabSelected.books}
+              className={"navbar-item zona " + tabSelected.day6}
             >
               {t("nav.day6")}
             </Link>
             <Link
               to="/day7"
-              className={"navbar-item zona " + tabSelected.books}
+              className={"navbar-item zona " + tabSelected.day7}
             >
               {t("nav.day7")}
             </Link>

@@ -1,4 +1,5 @@
 import React from 'react'
+import '../App.css';
 
 function Html() {
   return (
@@ -11,7 +12,7 @@ function Html() {
           transform: 'translateX(-50%)',
           color: '#292828'
         }}>
-        hello.
+        FLAMINGO
       </h1>
       <h1
         style={{
@@ -21,7 +22,7 @@ function Html() {
           transform: 'translateX(-65%)',
           color: '#f4b677'
         }}>
-        Your Future
+        FILTER
       </h1>
       <h1
         style={{
@@ -31,7 +32,7 @@ function Html() {
           transform: 'translateX(-50%)',
           color: '#673ab7'
         }}>
-        Awaits
+        FOREVER
       </h1>
     </>
   )

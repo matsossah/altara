@@ -252,11 +252,11 @@ i18n
           footer: {
             cta: "Let's go ! 👉",
             emoji: "❤️",
-            tagline: "Welcome to the LVQM community !",
+            tagline: "Welcome to Altara !",
             description:
-              "Join a community of experts and caring souls. Sometimes a first step into the unknown is the only thing that separates you from the life you deserve",
-            insta: "@lvqm_en",
-            instaURL: "https://www.instagram.com/lvqm_en",
+              "Meet your best self, the version of you that isn't afraid of who you could become",
+            insta: "@mateosossah",
+            instaURL: "https://www.instagram.com/mateosossah",
           },
         },
       },
@@ -488,11 +488,11 @@ i18n
           footer: {
             cta: "C'est parti ! 👉",
             emoji: "❤️",
-            tagline: "Bienvenue dans la communauté LVQM !",
+            tagline: "Bienvenue à Altara !",
             description:
-              "Une communauté d’experts et d’âmes bienveillantes t'attend. Parfois, un premier pas vers l’inconnu est la seule chose qui te sépare de la vie que tu mérites",
-            insta: "@lvqm_fr",
-            instaURL: "https://www.instagram.com/lvqm_fr",
+              "Rencontre la meilleure version de toi même, celle qui n'a pas peur de qui tu pourrais devenir",
+            insta: "@mateosossah",
+            instaURL: "https://www.instagram.com/mateosossah",
           },
         },
       },

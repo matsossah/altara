@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
-import './index.css';
+import './App.css';
 import Home from "./containers/Home";
 import Day1 from "./containers/Day1";
 import Day2 from "./containers/Day2";

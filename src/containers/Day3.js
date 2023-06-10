@@ -1,6 +1,5 @@
 import React from "react";
 import NavigationMenu from "../components/NavigationMenu";
-import SunriseSunset from "../components/SunriseSunset";
 import Footer from "../components/Footer";
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
@@ -22,9 +21,8 @@ const Day3 = () => {
           position: [3, 2, 6],
         }}
       >
-        <SunriseSunset />
-      </Canvas>
 
+      </Canvas>
       <Footer />
     </div>
   );

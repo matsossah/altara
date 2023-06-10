@@ -1,45 +1,20 @@
-import {
-  Sparkles,
-  Center,
-  OrbitControls,
-} from "@react-three/drei";
-import React from "react";
+import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import * as THREE from "three";
 import NavigationMenu from "../components/NavigationMenu";
 import Footer from "../components/Footer";
+import { Scene } from "./Scene";
 
 const Day1 = () => {
 
   return (
     <div className="wrapper" style={{ width: "100vw", height: "100vh" }}>
       <NavigationMenu />
-      <Canvas
-        gl={{
-          antialias: true,
-          toneMapping: THREE.ACESFilmicToneMapping,
-          outputEncoding: THREE.sRGBEncoding,
-        }}
-        camera={{
-          fov: 45,
-          near: 0.1,
-          far: 200,
-          position: [3, 2, 6],
-        }}
-      >
-        <color args={["#030202"]} attach="background" />
-
-        <OrbitControls makeDefault />
-
-        <Center>
-          <Sparkles
-            size={6}
-            scale={[4, 2, 4]}
-            position-y={1}
-            speed={0.2}
-            count={80}
-          />
-        </Center>
+      <Canvas>
+        <ambientLight />
+        <directionalLight color="red" intensity={10} />
+        <Suspense fallback={null}>
+          <Scene />
+        </Suspense>
       </Canvas>
       <Footer />
     </div>

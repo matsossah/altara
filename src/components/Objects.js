@@ -11,19 +11,19 @@ function Objects() {
       <pointLight color="blue" position={[8, -25, 5]} intensity={20} />
       <pointLight color="red" position={[0, -height * 2.25, 5]} intensity={10} />
       <Item color="red" position={[0, 1, 0]}>
-        <boxGeometry />
+        <icosahedronGeometry />
       </Item>
       <Item color="blue" position={[width / 6, -height * 1, 0]}>
-        <dodecahedronGeometry />
+      <boxGeometry />     
       </Item>
       <Item color="gray" position={[-width / 5, -height * 1.8, -2]}>
-        <coneGeometry args={[1, 1, 6]} />
+      <icosahedronGeometry />
       </Item>
       <Item color="purple" position={[width / 4, -height * 2, 0]}>
         <coneGeometry args={[1.5, 2, 3]} />
       </Item>
       <Item color="orange" position={[-width / 12, -height * 2.25, 0.5]}>
-        <coneGeometry args={[0.75, 2.5, 12]} />
+      <icosahedronGeometry />
       </Item>
     </>
   )
