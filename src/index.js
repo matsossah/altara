@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import './fonts/ZonaPro/ZonaPro-Bold.otf';
 
+
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 root.render(
     <App />

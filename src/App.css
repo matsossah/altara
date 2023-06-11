@@ -35,7 +35,7 @@
     overflow: hidden;
     overscroll-behavior-y: none;
     background-color: #101010;
-    background: radial-gradient(circle at bottom center, white 0%, #101010 80%);
+    background: radial-gradient(circle at bottom center, #DC846A 0%, #6CBBC3 80%);
     font-family: "Inter var", sans-serif;
     -webkit-font-smoothing: antialiased;
   }
@@ -54,16 +54,16 @@
   }
   
   .dot {
-    pointer-events: none;
     position: sticky;
     top: 0px;
     display: inline-block;
     max-width: 600px;
-    padding: 0;
-    padding: 80px;
-    color: #a0a0a0;
+    padding-top: 80px;
+    padding-left: 80px;
+    color: #DADADA;
     line-height: 1.6em;
     font-size: 15px;
+    font-weight: 500;
     letter-spacing: 1.5px;
   }
   
@@ -72,7 +72,6 @@
     pointer-events: none;
     color: white;
     font-size: 5em;
-    font-weight: 100;
     line-height: 1em;
     margin-top: 0.5em;
     margin-bottom: 0.25em;
@@ -115,87 +114,8 @@
     font-family: "ZonaPro-Bold";
    }
   
-  .purple {
-    color: #878CFF;
-  }
-  
-  .white {
-    color: #fff;
-  }
 
-  
-  h2 {
-    font-family: "Montserrat";
-    font-weight: 400;
-  }
-  
-  h3 {
-    font-family: "ZonaPro-Bold";
-    text-align: center;
-  }
-  
-    @media screen and (max-width: 768px) {
-      .animation {
-        font-size: 30px;
-        text-align: "left";
-      }
-      .big-title {
-        font-size: 100px;
-        text-align: left;
-      }
-      .smallP {
-        font-size: 14px;
-      }
-      p {
-        font-family: "Montserrat";
-        text-align: left;
-        font-size: 15px;
-      }
-      h1 {
-        font-size: 50px;
-        text-align: left;
-      }
-      h2 {
-        text-align: left;
-      }
-      h3 {
-        text-align: left;
-      }
-    }
-  
-    @media screen and (min-width: 769px) {
-      .animation {
-        font-size: 45px;
-      }
-      .testimonial-desc {
-        font-size: 15px;
-      }
-      p {
-        font-family: "Montserrat";
-        text-align: left;
-        font-size: 18px;
-      }
-      h1 {
-        font-family: "ZonaPro-Bold";
-        font-size: 60px;
-        text-align: left;
-      }
-      .desc {
-        font-size: 16px;
-      }
-    }
-  
-    .level-is-shrinkable {
-        flex-shrink: 1;
-    }
-  
-  
-  .is-valigned {
-      display: flex;
-      flex-wrap: wrap;
-      align-content: center; /* used this for multiple child */
-      align-items: center; /* if an only child */
-    }
+
   
   
     .error {

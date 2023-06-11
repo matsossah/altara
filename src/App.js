@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
 import './App.css';
 import Home from "./containers/Home";
 import Day1 from "./containers/Day1";
@@ -15,9 +14,8 @@ import Confirmation from "./containers/Confirmation";
 
 const App = () => {
   return (
-  <div>
-      <Router>
-        <ScrollToTop />
+  <div style={{ width: "100vw", height: "100vh" }}>
+      <Router style={{ width: "100vw", height: "100vh" }}>
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/day1" element={<Day1 />}></Route>
