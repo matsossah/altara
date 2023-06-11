@@ -8,6 +8,7 @@ import Overlay from "../components/Overlay"
 import * as THREE from 'three'
 
 const Home = () => {
+  
   const overlay = useRef()
   const caption = useRef()
   const scroll = useRef(0)
