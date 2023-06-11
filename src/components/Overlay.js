@@ -1,6 +1,8 @@
 import React, { forwardRef } from "react"
+import Footer from "./Footer";
 
 const Overlay = forwardRef(({ caption, scroll }, ref) => (
+  <>
   <div
     ref={ref}
     onScroll={(e) => {
@@ -8,7 +10,7 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => (
       caption.current.innerText = (scroll.current * 100).toFixed(0)
     }}
     class="scroll">
-    <div style={{ height: "400vh" }}>
+    <div style={{ height: "420vh" }}>
       <div class="dot">
         <h1 >Day 1</h1>
         Virtual reality (VR) is a simulated experience that can be similar to or completely different from the real world.
@@ -48,15 +50,18 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => (
         airship development at the beginning of the 20th century.
       </div>
     </div>
-      <div class="caption" style={{ display: "inline-block" }}>
-        <span ref={caption}>
-          0
-        </span>
-        <span>
-          %
-        </span>
-      </div>
+    <div class="caption" style={{ display: "inline-block" }}>
+      <span ref={caption}>
+        0
+      </span>
+      <span>
+        %
+      </span>
+    </div>
+    <Footer/>
   </div>
+        </>
+  
 ))
 
 export default Overlay

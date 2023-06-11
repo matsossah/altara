@@ -29,7 +29,7 @@ export default function Model({ scroll, ...props }) {
   })
 
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null} style={{ width: "100vw", height: "100vh" }}>
       <group
         onPointerOver={(e) => {
           e.stopPropagation();
