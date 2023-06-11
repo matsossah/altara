@@ -43,11 +43,10 @@
   .caption {
     pointer-events: none;
     position: fixed;
-    top: 0;
-    right: 0;
-    margin: 80px;
+    top: 130px;
+    right: 80px;
     color: white;
-    font-size: 8em;
+    font-size: 5em;
     font-weight: 100;
     line-height: 1em;
     font-variant-numeric: tabular-nums;
@@ -170,9 +169,6 @@
       }
       .testimonial-desc {
         font-size: 15px;
-      }
-      .big-title {
-        font-size: 120px;
       }
       p {
         font-family: "Montserrat";

@@ -48,14 +48,14 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => (
         airship development at the beginning of the 20th century.
       </div>
     </div>
-    <div style={{display: "inline-block"}}>
-      <span class="caption" ref={caption}>
-        0
-      </span>
-      <span class="caption">
-        %
-      </span>
-    </div>
+      <div class="caption" style={{ display: "inline-block" }}>
+        <span ref={caption}>
+          0
+        </span>
+        <span>
+          %
+        </span>
+      </div>
   </div>
 ))
 
