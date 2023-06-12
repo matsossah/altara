@@ -41,7 +41,9 @@ i18n
             tagline: "the life you deserve",
             nav:
               "By merging spirituality and the latest scientific findings, LVQM invites you to explore the way your beliefs, emotions, thoughts and actions can be changed in order to reach internal peace and any of your dreams !",
-            day1cta: "Let's start 🎉 >",
+            day1cta: "Day 1 ! 📍 >",
+            day2cta: "Day 2 🎉 >",
+            day3cta: "Day 3 🧿 >",
             lvqmLife: "The life",
             lvqmI: " I deserve",
             lvqmYou: " you deserve",

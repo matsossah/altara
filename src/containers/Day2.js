@@ -1,22 +1,26 @@
 import React, { Suspense } from "react";
-import NavigationMenu from "../components/NavigationMenu";
-import Footer from "../components/Footer";
 import { Canvas } from "@react-three/fiber";
-import { Scene } from "./Scene";
+import { Preload, OrbitControls } from "@react-three/drei";
+import Portal from "../components/Portal.js"
+import { useTranslation } from "react-i18next";
 
 const Day2 = () => {
+  const { t } = useTranslation();
   return (
-    <div className="wrapper" style={{ width: "100vw", height: "100vh" }}>
-      <NavigationMenu />
-      <Canvas>
-        <ambientLight />
-        <directionalLight color="red" intensity={10} />
-        <Suspense fallback={null}>
-          <Scene />
-        </Suspense>
-      </Canvas>
-      <Footer />
-    </div>
+    <Canvas frameloop="demand" camera={{ position: [0, 0, 0.1] }}>
+      <OrbitControls
+        enableZoom={false}
+        enablePan={false}
+        enableDamping
+        dampingFactor={0.2}
+        autoRotate={false}
+        rotateSpeed={-0.5}
+      />
+      <Suspense fallback={null}>
+        <Preload all />
+        <Portal url={'/Photosphere1.jpg'} position={[15, 0, 0]} label={t("cover.day3cta")} destination={"/day3"}/>
+      </Suspense>
+    </Canvas>
   );
 };
 
