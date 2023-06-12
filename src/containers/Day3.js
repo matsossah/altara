@@ -1,22 +1,35 @@
 import React, { Suspense } from "react";
-import NavigationMenu from "../components/NavigationMenu";
-import Footer from "../components/Footer";
 import { Canvas } from "@react-three/fiber";
-import { Scene } from "./Scene";
+import { Preload, OrbitControls } from "@react-three/drei";
+import Portal from "../components/Portal.js";
+import { useTranslation } from "react-i18next";
+import NavigationMenu from "../components/NavigationMenu";
 
 const Day3 = () => {
+  const { t } = useTranslation();
   return (
-    <div className="wrapper" style={{ width: "100vw", height: "100vh" }}>
+    <>
       <NavigationMenu />
-      <Canvas>
-        <ambientLight />
-        <directionalLight color="red" intensity={10} />
+      <Canvas frameloop="demand" camera={{ position: [0, 0, 0.1] }}>
+        <OrbitControls
+          enableZoom={false}
+          enablePan={false}
+          enableDamping
+          dampingFactor={0.2}
+          autoRotate={false}
+          rotateSpeed={-0.5}
+        />
         <Suspense fallback={null}>
-          <Scene />
+          <Preload all />
+          <Portal
+            url={"/2294472375_24a3b8ef46_o.jpg"}
+            position={[15, 0, 0]}
+            label={t("cover.day4cta")}
+            destination={"/day4"}
+          />
         </Suspense>
       </Canvas>
-      <Footer />
-    </div>
+    </>
   );
 };
 

@@ -6,7 +6,7 @@ import CTA from "./CTA.js";
 const Dome = ({ label, destination, texture, position  }) => {
   return (
     <group>
-      <mesh>
+      <mesh rotation-y={1.5}>
         <sphereGeometry args={[500, 60, 40]} />
         <meshBasicMaterial map={texture} side={THREE.BackSide} />
       </mesh>

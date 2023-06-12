@@ -1,31 +1,36 @@
-import React from "react";
-import NavigationMenu from "../components/NavigationMenu";
-import Footer from "../components/Footer";
+import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import * as THREE from "three";
+import { Preload, OrbitControls } from "@react-three/drei";
+import Portal from "../components/Portal.js";
+import { useTranslation } from "react-i18next";
+import NavigationMenu from "../components/NavigationMenu";
 
 const Day5 = () => {
+  const { t } = useTranslation();
   return (
-    <div className="wrapper" style={{ width: "100vw", height: "100vh" }}>
+    <>
       <NavigationMenu />
-      <Canvas
-        gl={{
-          antialias: true,
-          toneMapping: THREE.ACESFilmicToneMapping,
-          outputEncoding: THREE.sRGBEncoding,
-        }}
-        camera={{
-          fov: 45,
-          near: 0.1,
-          far: 200,
-          position: [3, 2, 6],
-        }}
-      >
-
+      <Canvas frameloop="demand" camera={{ position: [0, 0, 0.1] }}>
+        <OrbitControls
+          enableZoom={false}
+          enablePan={false}
+          enableDamping
+          dampingFactor={0.2}
+          autoRotate={false}
+          rotateSpeed={-0.5}
+        />
+        <Suspense fallback={null}>
+          <Preload all />
+          <Portal
+            url={"/Photosphere1.jpg"}
+            position={[15, 0, 0]}
+            label={t("cover.day6cta")}
+            destination={"/day6"}
+          />
+        </Suspense>
       </Canvas>
-      <Footer />
-    </div>
+    </>
   );
-}
+};
 
 export default Day5;

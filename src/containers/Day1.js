@@ -22,8 +22,8 @@ const Day1 = () => {
         <Suspense fallback={null}>
           <Preload all />
           <Portal
-            url={"/2294472375_24a3b8ef46_o.jpg"}
-            position={[10, 0, -15]}
+            url={"/inside.jpg"}
+            position={[0.6, 0, 25]}
             label={t("cover.day2cta")}
             destination={"/day2"}
           />
