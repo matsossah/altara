@@ -5,27 +5,19 @@ import NavigationMenu from "../components/NavigationMenu";
 import Footer from "../components/Footer";
 import Model from "../components/Model"
 import Overlay from "../components/Overlay"
-import * as THREE from 'three'
 
 const Home = () => {
-  
   const overlay = useRef()
   const caption = useRef()
   const scroll = useRef(0)
   return (
     <div className="wrapper" style={{ width: "100vw", height: "100vh" }}>
+      <NavigationMenu />
       <Canvas
-        gl={{
-          antialias: true,
-          toneMapping: THREE.ACESFilmicToneMapping,
-          outputEncoding: THREE.sRGBEncoding,
-        }}
-        camera={{
-          fov: 45,
-          near: 0.1,
-          far: 200,
-          position: [3, 2, 6],
-        }}
+        mode="concurrent"
+        shadows
+        eventSource={document.getElementById("canvas")} 
+        eventPrefix="client"
       >
         <ambientLight intensity={1} />
         <Suspense fallback={null}>
@@ -33,9 +25,8 @@ const Home = () => {
           <Environment preset="city" />
         </Suspense>
       </Canvas>
-      <NavigationMenu />
-      <Footer/>
       <Overlay ref={overlay} caption={caption} scroll={scroll} />
+      <Footer />
     </div>
   );
 };

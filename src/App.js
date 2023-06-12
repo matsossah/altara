@@ -1,6 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
 import Home from "./containers/Home";
 import Day1 from "./containers/Day1";
 import Day2 from "./containers/Day2";
@@ -11,26 +11,32 @@ import Day6 from "./containers/Day6";
 import Day7 from "./containers/Day7";
 import Checkout from "./containers/Checkout";
 import Confirmation from "./containers/Confirmation";
+import NavigationMenu from "./components/NavigationMenu";
+import Footer from "./components/Footer";
+import ThreeRouter from "./ThreeRouter.js";
+import { history } from "./History.js";
 
 const App = () => {
   return (
-  <div style={{ width: "100vw", height: "100vh" }}>
-      <Router style={{ width: "100vw", height: "100vh" }}>
+    <ThreeRouter history={history}>
+      <div className="App" style={{ width: "100vw", height: "100vh" }}>
+        <NavigationMenu />
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/day1" element={<Day1 />}></Route>
-          <Route path="/day2" element={<Day2 />}></Route>
-          <Route path="/day3" element={<Day3 />}></Route>
-          <Route path="/day4" element={<Day4 />}></Route>
-          <Route path="/day5" element={<Day5 />}></Route>
-          <Route path="/day6" element={<Day6 />}></Route>
-          <Route path="/day7" element={<Day7 />}></Route>
-          <Route path="/checkout" element={<Checkout />}></Route>
-          <Route path="/confirmation" element={<Confirmation />}></Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/day1" element={<Day1 />} />
+          <Route path="/day2" element={<Day2 />} />
+          <Route path="/day3" element={<Day3 />} />
+          <Route path="/day4" element={<Day4 />} />
+          <Route path="/day5" element={<Day5 />} />
+          <Route path="/day6" element={<Day6 />} />
+          <Route path="/day7" element={<Day7 />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/confirmation" element={<Confirmation />} />
         </Routes>
-      </Router>
-    </div>
+        <Footer />
+      </div>
+    </ThreeRouter>
   );
-}
+};
 
 export default App;

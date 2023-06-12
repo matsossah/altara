@@ -20,10 +20,9 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => {
         <h1 >Day 1</h1>
         Virtual reality (VR) is a simulated experience that can be similar to or completely different from the real world.
         <CTA
-        type={"link"}
         label={t("cover.day1cta")}
         destination={"/day1"}
-        style="button is-normal is-rounded is-light is-link my-6 "
+        style={{ bulma: "button is-normal is-rounded is-light is-link my-6 "}}
       />
       </div>
 

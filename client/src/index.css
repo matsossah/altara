@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "ZonaPro-Bold";
+  src: local("ZonaPro-Bold"),
+   url("./fonts/ZonaPro/ZonaPro-Bold.otf") format("truetype");
+  font-weight: bold;
+  }
+
+html,
+body,
+#root,
+#wrapper
+{
+    width: 100vw;
+    height: 100vh;
+}

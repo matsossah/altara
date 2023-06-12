@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import './fonts/ZonaPro/ZonaPro-Bold.otf';
+import React from "react";
+import "./index.css";
+import App from "./App";
+import "./fonts/ZonaPro/ZonaPro-Bold.otf";
+import * as ReactDOMClient from "react-dom/client";
 
-
-const root = ReactDOM.createRoot(document.querySelector('#root'))
-root.render(
+ReactDOMClient.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
     <App />
+  </React.StrictMode>
 );
